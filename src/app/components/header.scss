@@ -1,0 +1,27 @@
+.app-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 0.5rem 12px;
+}
+.app-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app-header .brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.app-header .nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+.app-header .nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+.app-header .nav a:hover { text-decoration: underline; }
