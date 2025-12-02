@@ -1,6 +1,39 @@
-<section class="page home">
-  <div class="container">
-    <h1>Welcome to Home</h1>
-    <p>This is the Home page.</p>
+<div class="home-container">
+  <h2>Employee List</h2>
+
+  <!-- Material Table -->
+  <div class="table-wrapper">
+    <table mat-table [dataSource]="employees" class="employee-table mat-elevation-z8">
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let emp">{{ emp.id }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="employee_name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let emp">{{ emp.employee_name }}</td>
+      </ng-container>
+
+      <!-- Age Column -->
+      <ng-container matColumnDef="employee_age">
+        <th mat-header-cell *matHeaderCellDef>Age</th>
+        <td mat-cell *matCellDef="let emp">{{ emp.employee_age }}</td>
+      </ng-container>
+
+      <!-- Salary Column -->
+      <ng-container matColumnDef="employee_salary">
+        <th mat-header-cell *matHeaderCellDef>Salary</th>
+        <td mat-cell *matCellDef="let emp">${{ emp.employee_salary }}</td>
+      </ng-container>
+
+      <!-- Header and Row Definitions -->
+      <tr mat-header-row *matHeaderRowDef="['id', 'employee_name', 'employee_age', 'employee_salary']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['id', 'employee_name', 'employee_age', 'employee_salary']"></tr>
+    </table>
   </div>
-</section>
+
+ 
+</div>
